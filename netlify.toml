@@ -17,6 +17,6 @@
 
 # Optional: To explicitly include files outside the functions directory
 [functions]
-  included_files = ["functions/sarabun.ttf"] # ยังคงเก็บบรรทัดนี้ไว้
+  included_files = ["functions"] # ยังคงเก็บบรรทัดนี้ไว้
   external_node_modules = ["express", "pdf-lib", "@pdf-lib/fontkit", "body-parser", "cors", "serverless-http"]
   node_bundler = "esbuild"
