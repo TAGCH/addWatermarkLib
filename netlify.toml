@@ -1,9 +1,8 @@
 # netlify.toml
 
 [build]
-  # ไม่ได้มี frontend build, แต่ Netlify ต้องการ build.command.
-  # สามารถใส่คำสั่งที่ไม่ทำอะไรเลย หรือใช้ npm install ถ้าต้องการให้แน่ใจว่า dependencies ถูกติดตั้ง
-  command = "echo 'No frontend build command needed'" 
+  # เปลี่ยน command เป็น npm install
+  command = "npm install" 
 
   # The directory where your Netlify Functions are located
   functions = "functions" 
@@ -12,13 +11,12 @@
 # This tells Netlify to redirect /api/* to your function handler
 # so you can call it easily.
 [[redirects]]
-  from = "/addWatermark" # หรือ /api/* ถ้าคุณมีหลายฟังก์ชันใน functions folder
-  to = "/.netlify/functions/watermark" # ต้องตรงกับชื่อไฟล์ function ของคุณ (watermark.js)
+  from = "/addWatermark"
+  to = "/.netlify/functions/watermark"
   status = 200
 
 # Optional: To explicitly include files outside the functions directory
-# if sarabun.ttf is NOT in the functions folder, e.g., if it's at the project root
 [functions]
-  included_files = ["functions/sarabun.ttf"]
-  external_node_modules = ["express", "pdf-lib", "@pdf-lib/fontkit", "body-parser", "cors", "serverless-http"] # <--- เพิ่ม "serverless-http" เข้าไปตรงนี้
+  included_files = ["functions/sarabun.ttf"] # ยังคงเก็บบรรทัดนี้ไว้
+  external_node_modules = ["express", "pdf-lib", "@pdf-lib/fontkit", "body-parser", "cors", "serverless-http"]
   node_bundler = "esbuild"
