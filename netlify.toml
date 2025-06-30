@@ -20,5 +20,5 @@
 # if sarabun.ttf is NOT in the functions folder, e.g., if it's at the project root
 [functions]
   included_files = ["functions/sarabun.ttf"]
-  external_node_modules = ["express", "pdf-lib", "@pdf-lib/fontkit", "body-parser", "cors"] # List modules used
-  node_bundler = "esbuild" # Netlify uses esbuild by default for faster builds
+  external_node_modules = ["express", "pdf-lib", "@pdf-lib/fontkit", "body-parser", "cors", "serverless-http"] # <--- เพิ่ม "serverless-http" เข้าไปตรงนี้
+  node_bundler = "esbuild"
