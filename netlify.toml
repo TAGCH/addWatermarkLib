@@ -19,6 +19,6 @@
 # Optional: To explicitly include files outside the functions directory
 # if sarabun.ttf is NOT in the functions folder, e.g., if it's at the project root
 [functions]
-  included_files = ["./sarabun.ttf"] # <-- uncomment this if sarabun.ttf is at project root
+  included_files = ["functions/sarabun.ttf"]
   external_node_modules = ["express", "pdf-lib", "@pdf-lib/fontkit", "body-parser", "cors"] # List modules used
   node_bundler = "esbuild" # Netlify uses esbuild by default for faster builds
