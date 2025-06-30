@@ -12,7 +12,7 @@
 # This tells Netlify to redirect /api/* to your function handler
 # so you can call it easily.
 [[redirects]]
-  from = "/api/watermark" # หรือ /api/* ถ้าคุณมีหลายฟังก์ชันใน functions folder
+  from = "/addWatermark" # หรือ /api/* ถ้าคุณมีหลายฟังก์ชันใน functions folder
   to = "/.netlify/functions/watermark" # ต้องตรงกับชื่อไฟล์ function ของคุณ (watermark.js)
   status = 200
 
