@@ -24,7 +24,7 @@ app.use(bodyParser.json({ limit: '50mb' }));
 // or you can configure `included_files` in netlify.toml.
 let sarabunFontBytes;
 let sarabunFontLoaded = false;
-const fontPath = './sarabun.ttf'; // This path needs to be correct within the function's deployed context.
+const fontPath = 'sarabun.ttf'; // This path needs to be correct within the function's deployed context.
                                  // Let's assume for now `sarabun.ttf` is placed alongside `watermark.js`
                                  // within the deployed function bundle.
 
